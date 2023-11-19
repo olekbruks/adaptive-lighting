@@ -11,6 +11,8 @@ from homeassistant.components.light import (
     ATTR_BRIGHTNESS_STEP_PCT,
     ATTR_COLOR_NAME,
     ATTR_COLOR_TEMP_KELVIN,
+    ATTR_EFFECT,
+    ATTR_FLASH,
     ATTR_HS_COLOR,
     ATTR_RGB_COLOR,
     ATTR_RGBW_COLOR,
@@ -39,6 +41,12 @@ BRIGHTNESS_ATTRS = {
     ATTR_BRIGHTNESS_PCT,
     ATTR_BRIGHTNESS_STEP,
     ATTR_BRIGHTNESS_STEP_PCT,
+}
+
+
+EFFECT_ATTRS = {
+    ATTR_FLASH,
+    ATTR_EFFECT,
 }
 
 ServiceData = dict[str, Any]
