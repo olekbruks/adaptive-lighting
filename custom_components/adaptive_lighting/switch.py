@@ -86,6 +86,7 @@ from homeassistant.util.color import (
 from .adaptation_utils import (
     BRIGHTNESS_ATTRS,
     COLOR_ATTRS,
+    EFFECT_ATTRS,
     AdaptationData,
     ServiceData,
     prepare_adaptation_data,
@@ -2648,7 +2649,7 @@ class AdaptiveLightingManager:
             entity_id,
             service_data,
         )
-        if any(attr in service_data for attr in COLOR_ATTRS | BRIGHTNESS_ATTRS):
+        if any(attr in service_data for attr in COLOR_ATTRS | BRIGHTNESS_ATTRS | EFFECT_ATTRS):
             self.mark_as_manual_control(entity_id)
             return True
         return False
